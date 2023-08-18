@@ -1,16 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[24]:
-
-
 import pandas as pd
 import yfinance as yf
 import datetime as dt
 import matplotlib.pyplot as plt
-
-
-# In[25]:
 
 
 def rsi(ticker,start,end,window_period,plot=False):
@@ -65,28 +59,16 @@ def rsi(ticker,start,end,window_period,plot=False):
     return combine
 
 
-# In[26]:
-
-
 start=dt.datetime(2020,1,1)
 end=dt.datetime.now()
 ticker='RELIANCE.NS'
 
 
-# In[27]:
-
-
 RSI=rsi(ticker,start,end,window_period=14,plot=True)
-
-
-# In[28]:
 
 
 file=pd.read_csv(r'C:\Users\AMIT VASHISTHA\OneDrive\Desktop\TICKER NAME.csv')
 print(file.shape)
-
-
-# In[29]:
 
 
 list_of_share_with_low_rsi=[]
@@ -104,43 +86,15 @@ for ticker in file['Symbol.NS']:
     print(i)
 
 
-# In[ ]:
-
-
-
-
-
-# In[30]:
-
-
 print(i)
 
-
-# In[31]:
-
-
 print(list_of_share_with_low_rsi)
-
-
-# In[35]:
-
-
-RSI=rsi('APTUS.NS',start,end,window_period=14,plot=True)
-
-
-# In[33]:
 
 
 RSI
 
 
-# In[34]:
-
-
 print(len(list_of_share_with_low_rsi))
-
-
-# In[ ]:
 
 
 
