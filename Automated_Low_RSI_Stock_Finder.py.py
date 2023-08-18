@@ -91,7 +91,6 @@ print(i)
 print(list_of_share_with_low_rsi)
 
 
-RSI
 
 
 print(len(list_of_share_with_low_rsi))
